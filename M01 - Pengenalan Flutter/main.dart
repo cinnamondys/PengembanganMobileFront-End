@@ -146,26 +146,23 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,  // biar button berjarak rata
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: const Icon(Icons.arrow_upward),
-          ), // This trailing comma makes auto-formatting nicer for build methods.
           FloatingActionButton(
             onPressed: _decrementCounter,
             tooltip: 'Decrement',
-            child: const Icon(Icons.arrow_downward),
+            child: const Icon(Icons.remove),
+          ), // This trailing comma makes auto-formatting nicer for build methods.
+          // SizedBox(width: 150),   // biar jarak kt yg tentukan
+          FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
           ),
         ]
       )
     );
   }
 }
-
-// biar gbr tampil di web, ibarat cors di express, img hrs dr host/ domain yg sama
-// ketik di terminal setiap kali mau dijalankan
-// flutter run --web-renderer html
-// ketik 2
