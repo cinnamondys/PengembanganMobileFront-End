@@ -8,7 +8,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: const Text('Profile (211110347 - Cindy Sintiya)'),
       ),
       body: Center(
         child: Column(
@@ -40,13 +40,13 @@ class ProfileScreen extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Image.asset('assets/beautiful bg.jpg', width: 100,),
+                Image.asset('assets/beautiful bg.jpg', width: 100),
                 Image.asset('assets/beautiful bg.jpg', width: 100),
                 Image.asset('assets/beautiful bg.jpg', width: 100),
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: () {
@@ -54,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
                   }, 
                   child: const Text('Kembali')
                 ),
-                SizedBox(width: 20,),
+                // SizedBox(width: 50,),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileDetailScreen()));
@@ -70,33 +70,33 @@ class ProfileScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 5.0),
-                      child: Icon(Icons.call, color: Colors.blue,),
+                    Icon(Icons.call, color: Colors.blue,),
+                    Container(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Text('CALL', style: TextStyle(color: Colors.blue),),
                     ),
-                    Text('CALL', style: TextStyle(color: Colors.blue),),
                   ],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 5.0),
-                      child: Icon(Icons.send, color: Colors.blue,),
+                    Icon(Icons.send, color: Colors.blue,),
+                    Container(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Text('ROUTE', style: TextStyle(color: Colors.blue),),
                     ),
-                    Text('ROUTE', style: TextStyle(color: Colors.blue),),
                   ],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(bottom: 5.0),
-                      child: Icon(Icons.share, color: Colors.blue,),
+                    Icon(Icons.share, color: Colors.blue,),
+                    Container(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Text('SHARE', style: TextStyle(color: Colors.blue),),
                     ),
-                    Text('SHARE', style: TextStyle(color: Colors.blue),),
                   ],
                 ),
               ],
